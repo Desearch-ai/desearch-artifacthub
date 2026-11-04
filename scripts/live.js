@@ -1,19 +1,8 @@
-{
-  "name": "desearch-artifacthub",
-  "version": "1.0.0",
-  "license": "MIT",
-  "private": true,
-  "type": "module",
-  "description": "Repository metadata and search helpers for Desearch MCP. About Desearch: AI search, X search and web search for AI agents, plus page extraction and X data tools.",
-  "engines": {
-    "node": ">=22"
-  },
-  "scripts": {
-    "test": "node --test",
-    "live": "node scripts/live.js"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "1.30.1",
-    "yaml": "2.9.1"
-  }
+import { runLive } from '../src/live.js';
+try {
+  const { resultCount, firstTitle } = await runLive();
+  console.log(JSON.stringify({ resultCount, firstTitle }));
+} catch {
+  console.error('Live search failed. Check DESEARCH_API_KEY, network access, and the remote search tool schema.');
+  process.exitCode = 1;
 }
