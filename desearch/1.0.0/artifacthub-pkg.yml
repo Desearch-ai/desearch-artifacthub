@@ -1,0 +1,19 @@
+version: 1.0.0
+name: desearch
+displayName: Desearch
+createdAt: "2026-11-04T00:00:00Z"
+description: |
+  Search the web with Desearch and receive titles, links, and snippets.
+  About Desearch: AI search, X search and web search for AI agents, plus page extraction and X data tools.
+keywords:
+  - mcp
+  - search
+homeURL: https://desearch.ai
+maintainers:
+  - name: Desearch
+    email: dev@desearch.ai
+readme: |
+  Connect to https://mcp.desearch.ai/mcp using streamable-http.
+  Set the Authorization header to Bearer followed by your DESEARCH_API_KEY environment value.
+  Search results include title, link, and snippet fields.
+  About Desearch: AI search, X search and web search for AI agents, plus page extraction and X data tools.
