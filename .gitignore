@@ -1,4 +1,4 @@
-repositoryID: ""
-owners:
-  - name: Desearch
-    email: dev@desearch.ai
+node_modules/
+.env
+.env.*
+npm-debug.log*
