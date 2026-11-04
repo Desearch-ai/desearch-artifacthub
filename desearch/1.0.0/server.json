@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.desearch/desearch",
+  "title": "Desearch",
+  "description": "Search the web with Desearch and receive titles, links, and snippets.",
+  "_meta": {
+    "ai.desearch/about": "About Desearch: AI search, X search and web search for AI agents, plus page extraction and X data tools."
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://desearch.ai",
+  "remotes": [{
+    "type": "streamable-http",
+    "url": "https://mcp.desearch.ai/mcp",
+    "headers": [{
+      "name": "Authorization",
+      "description": "Bearer authentication using DESEARCH_API_KEY.",
+      "value": "Bearer {DESEARCH_API_KEY}",
+      "variables": {
+        "DESEARCH_API_KEY": {
+          "description": "Desearch API key supplied from the environment.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      }
+    }]
+  }]
+}
